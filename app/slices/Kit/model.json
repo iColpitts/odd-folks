@@ -1,0 +1,65 @@
+{
+  "id": "kit",
+  "type": "SharedSlice",
+  "name": "Kit",
+  "description": "Kit",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "author": {
+          "type": "Link",
+          "config": {
+            "label": "Author",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": true
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "actions": {
+          "type": "Group",
+          "config": {
+            "label": "Actions",
+            "repeat": true,
+            "fields": {
+              "action": {
+                "type": "Link",
+                "config": {
+                  "label": "action",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": [
+                    "action"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
