@@ -24,6 +24,7 @@
   <section
     :data-slice-type="slice.slice_type"
     :data-slice-variation="slice.variation"
+    class="px-32"
   >
     <h2>{{ slice.primary.title }}</h2>
     <template v-for="link in slice.primary.author" :key="link.key">

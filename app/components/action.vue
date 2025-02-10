@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="py-4">
         <h4>{{ data.data.name }}</h4>
         <p>{{ data.data.description }}</p>
         <span v-for="outcome in data.data.outcomes">
