@@ -1,23 +1,22 @@
 <script setup lang="ts">
-import type { Content } from "@prismicio/client";
-import * as prismic from "@prismicio/client";
-
+  import type { Content } from "@prismicio/client";
+  import Action from "~/components/action.vue";
 
 // The array passed to `getSliceComponentProps` is purely optional.
 // Consider it as a visual hint for you when templating your slice.
-defineProps(
-  getSliceComponentProps<Content.KitSlice>([
-    "slice",
-    "index",
-    "slices",
-    "context",
-  ]),
-);
-const { client } = usePrismic();
+  defineProps(
+    getSliceComponentProps<Content.KitSlice>([
+      "slice",
+      "index",
+      "slices",
+      "context",
+    ]),
+  );
+  const { client } = usePrismic();
 
-  // const { data: actions } = await useAsyncData("posts", () =>
-  //   client.getAllByType("action")
-  // );
+  const { data: actions } = await useAsyncData("posts", () =>
+    client.getAllByType("action")
+  );
 
 </script>
 
@@ -31,7 +30,7 @@ const { client } = usePrismic();
       <PrismicLink :field="link" />
     </template>
     <template v-for="item in slice.primary.actions">
-      <p>{{ item }}</p>
+      <Action v-if="actions" :data="actions.find((el) => el.id == item.action.id)"></Action>
     </template>
   </section>
 </template>

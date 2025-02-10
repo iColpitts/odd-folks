@@ -9,14 +9,14 @@ type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
  */
 export interface ActionDocumentDataOutcomesItem {
   /**
-   * Description field in *Action → Outcome*
+   * Text field in *Action → Outcome*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: action.outcomes[].description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **API ID Path**: action.outcomes[].text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  description: prismic.RichTextField;
+  text: prismic.KeyTextField;
 }
 
 /**
@@ -48,13 +48,13 @@ interface ActionDocumentData {
   /**
    * Description field in *Action*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
    * - **API ID Path**: action.description
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  description: prismic.RichTextField;
+  description: prismic.KeyTextField;
 
   /**
    * Outcome field in *Action*

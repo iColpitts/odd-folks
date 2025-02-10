@@ -1,4 +1,5 @@
 import { repositoryName, apiEndpoint } from './slicemachine.config.json';
+import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -45,4 +46,10 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2025-01-06',
+  css: ['./assets/css/main.css'],
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
 })
