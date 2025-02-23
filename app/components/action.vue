@@ -1,7 +1,7 @@
 <template>
-    <div class="py-4">
+    <div class="py-4 w-max-300">
         <h4>{{ data.data.name }}</h4>
-        <p>{{ data.data.description }}</p>
+        <p class="outcome">{{ data.data.description }}</p>
         <span v-for="outcome in data.data.outcomes">
             <p>{{ outcome.text }}</p>
         </span>
@@ -19,5 +19,8 @@
 </script>
 
 <style scoped>
+.outcome {
+    padding: 0px;
+}
 
 </style>

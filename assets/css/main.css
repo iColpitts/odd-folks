@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+.jacquard-12-regular {
+    font-family: "Jacquard 12", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+h1 {
+    @apply pt-4 text-4xl;
+    font-family: 'jacquard 12', serif;
+}
+  
+h2 {
+    @apply py-4 text-4xl;
+    font-family: "Jacquard 12", serif;
+}
+
+h3 {
+    @apply py-2 text-3xl text-gray-800;
+    font-family: "jacquard 12", serif;
+}
+
+h4 {
+    @apply text-2xl;
+    font-family: "barriecito", serif;
+}
+
+p {
+    @apply py-2;
+}
